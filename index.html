@@ -7,7 +7,6 @@
 
     <title>Ivettegram</title>
 
-    <!-- Icono de la página -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
     <style>
@@ -35,13 +34,39 @@
             max-width: 80%;
             height: auto;
             cursor: pointer;
-            transition: transform 0.4s ease, filter 0.4s ease;
+            user-select: none;
+            -webkit-user-drag: none;
             animation: flotar 3s ease-in-out infinite;
+            transition: filter 0.3s ease;
         }
 
         .ramitas:hover {
-            transform: scale(1.12) rotate(-3deg);
             filter: drop-shadow(0 0 12px rgba(255, 165, 0, 0.5));
+        }
+
+        .ramitas.squish {
+            animation: squishy 0.6s ease-in-out;
+        }
+
+        .indicacion {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: indicar 2s ease-in-out infinite;
+        }
+
+        .indicacion p {
+            margin: 5px 0;
+            color: #ff9900;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .flecha {
+            color: #ff9900;
+            font-size: 35px;
+            line-height: 1;
         }
 
         @keyframes aparecer {
@@ -65,28 +90,87 @@
                 transform: translateY(-10px);
             }
         }
+
+        @keyframes squishy {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            20% {
+                transform: scale(1.2, 0.7);
+            }
+
+            40% {
+                transform: scale(0.8, 1.25);
+            }
+
+            60% {
+                transform: scale(1.1, 0.9);
+            }
+
+            80% {
+                transform: scale(0.95, 1.05);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes indicar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Hola IVETTE</h1>
+    <h1>Hola Webones</h1>
 
     <p>Esta es mi webada para Formación Integral II, se vienen cositas...</p>
 
     <div class="gif-container">
-        <a href="https://www.youtube.com/@NickDoodlez"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <img
-                src="images/ramitas.gif"
-                alt="Ramitas"
-                class="ramitas"
-            >
-
-        </a>
+        <img
+            src="images/ramitas.gif"
+            alt="Ramitas"
+            class="ramitas"
+            id="ramitas"
+        >
     </div>
+
+    <div class="indicacion">
+        <span class="flecha">↑</span>
+        <p>presiona al nick chiquito</p>
+    </div>
+
+    <audio id="cuteSound" src="sounds/cute.mp3" preload="auto"></audio>
+
+    <script>
+        const ramitas = document.getElementById("ramitas");
+        const cuteSound = document.getElementById("cuteSound");
+
+        ramitas.addEventListener("click", () => {
+            cuteSound.currentTime = 0;
+            cuteSound.play();
+
+            ramitas.classList.remove("squish");
+            void ramitas.offsetWidth;
+            ramitas.classList.add("squish");
+
+            ramitas.addEventListener("animationend", function quitarAnimacion(event) {
+                if (event.animationName === "squishy") {
+                    ramitas.classList.remove("squish");
+                    ramitas.removeEventListener("animationend", quitarAnimacion);
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
