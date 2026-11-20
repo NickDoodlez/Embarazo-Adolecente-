@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,59 +18,63 @@
         h1 {
             color: orange;
         }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            animation: aparecer 1.5s ease-out both;
+        }
+
+        .ramitas {
+            width: 250px;
+            max-width: 80%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            animation: flotar 3s ease-in-out infinite;
+        }
+
+        .ramitas:hover {
+            transform: scale(1.12) rotate(-3deg);
+            filter: drop-shadow(0 0 12px rgba(255, 165, 0, 0.5));
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes flotar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
     </style>
 </head>
+
 <body>
     <h1>Hola IVETTE</h1>
+
     <p>Esta es mi webada para Formación Integral II, se vienen cositas...</p>
+
+    <div class="gif-container">
+        <a href="https://www.youtube.com/@NickDoodlez"
+           target="_blank"
+           rel="noopener noreferrer">
+            <img src="images/ramitas.gif"
+                 alt="Ramitas"
+                 class="ramitas">
+        </a>
+    </div>
 </body>
 </html>
-
-<div class="gif-container">
-    <a href="https://www.youtube.com/@NickDoodlez" target="_blank" rel="noopener noreferrer">
-        <img src="images/ramitas.gif" alt="Ramitas" class="ramitas">
-    </a>
-</div>
-
-<style>
-.gif-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    animation: aparecer 1.5s ease-out both;
-}
-
-.ramitas {
-    width: 250px;
-    max-width: 80%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.4s ease, filter 0.4s ease;
-    animation: flotar 3s ease-in-out infinite;
-}
-
-.ramitas:hover {
-    transform: scale(1.12) rotate(-3deg);
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.85);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes flotar {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-</style>
