@@ -1,176 +1,309 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ivettegram</title>
-
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <style>
-        body {
-            background: #ffffff;
-            color: rgb(0, 0, 0);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-
-        h1 {
-            color: orange;
-        }
-
-        .gif-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            animation: aparecer 1.5s ease-out both;
-        }
-
-        .ramitas {
-            width: 250px;
-            max-width: 80%;
-            height: auto;
-            cursor: pointer;
-            user-select: none;
-            -webkit-user-drag: none;
-            animation: flotar 3s ease-in-out infinite;
-            transition: filter 0.3s ease;
-        }
-
-        .ramitas:hover {
-            filter: drop-shadow(0 0 12px rgba(255, 165, 0, 0.5));
-        }
-
-        .ramitas.squish {
-            animation: squishy 0.6s ease-in-out;
-        }
-
-        .indicacion {
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: indicar 2s ease-in-out infinite;
-        }
-
-        .indicacion p {
-            margin: 5px 0;
-            color: #ff9900;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .flecha {
-            color: #ff9900;
-            font-size: 35px;
-            line-height: 1;
-        }
-
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(0.85);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        @keyframes flotar {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes squishy {
-            0% {
-                transform: scale(1, 1);
-            }
-
-            20% {
-                transform: scale(1.2, 0.7);
-            }
-
-            40% {
-                transform: scale(0.8, 1.25);
-            }
-
-            60% {
-                transform: scale(1.1, 0.9);
-            }
-
-            80% {
-                transform: scale(0.95, 1.05);
-            }
-
-            100% {
-                transform: scale(1, 1);
-            }
-        }
-
-        @keyframes indicar {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hablemos sin miedo | Vlog sobre prevención del embarazo adolescente</title>
+<meta name="description" content="Vlog sobre el embarazo adolescente: qué es, sus consecuencias, métodos anticonceptivos, derechos y dónde buscar ayuda en Colombia.">
+<meta name="author" content="NickDZ">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#inicio"><img src="images/favicon.png" alt="">Hablemos sin miedo</a>
+<button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menú</button>
+<nav id="nav" aria-label="Principal">
+<ul>
+<li><a href="#que-es">Qué es</a></li>
+<li><a href="#causas">Causas</a></li>
+<li><a href="#consecuencias">Consecuencias</a></li>
+<li><a href="#anticonceptivos">Métodos</a></li>
+<li><a href="#mitos">Mitos</a></li>
+<li><a href="#ayuda">Ayuda</a></li>
+<li><a href="#preguntas">Preguntas</a></li>
+</ul>
+</nav>
+</div>
+</header>
 
-    <h1>Hola Webones</h1>
+<main id="contenido">
+<section class="hero" id="inicio">
+<div class="wrap">
+<div>
+<h1>Hablemos <span>sin miedo</span></h1>
+<p class="lead">Prevención del embarazo adolescente, contada claro y sin juicios.</p>
+<p class="lema">Infórmate · Decide · Cuídate · Construye tu futuro</p>
+<div class="btns">
+<a class="btn" href="#que-es">Empezar a leer</a>
+<a class="btn alt" href="#ayuda">Buscar ayuda</a>
+</div>
+</div>
+<div class="arco"><img src="images/portada.jpg" alt="Adolescente sentada en su cuarto abrazando sus rodillas con una prueba de embarazo en la mano"></div>
+</div>
+</section>
 
-    <p>Esta es mi webada para Formación Integral II, se vienen cositas...</p>
+<section id="que-es" class="tint">
+<div class="wrap dos">
+<div>
+<h2>¿Qué es el embarazo adolescente?</h2>
+<p>Es el que ocurre durante la adolescencia, generalmente entre los 10 y los 19 años. Puede traer cambios físicos, emocionales, familiares, sociales y educativos.</p>
+<p style="margin-top:14px">Prevenirlo significa dar información, educación sexual integral, acceso a servicios de salud y herramientas para decidir con responsabilidad sobre el cuerpo, las relaciones y el futuro.</p>
+<h3 style="margin-top:28px">¿Por qué hablar de esto?</h3>
+<ul class="razones">
+<li>Todos los adolescentes tienen derecho a recibir educación sexual.</li>
+<li>Conocer nuestro cuerpo ayuda a decidir con información.</li>
+<li>Permite prevenir embarazos no planeados.</li>
+<li>Ayuda a reconocer relaciones sanas y situaciones de presión.</li>
+<li>Protege los proyectos personales, educativos y profesionales.</li>
+</ul>
+</div>
+<img src="images/infografia.jpg" alt="Infografía sobre las consecuencias de un embarazo adolescente: depresión, problemas familiares, fracaso escolar, miedo al rechazo y problemas sociales">
+</div>
+</section>
 
-    <div class="gif-container">
-        <img
-            src="images/ramitas.gif"
-            alt="Ramitas"
-            class="ramitas"
-            id="ramitas"
-        >
-    </div>
+<section id="causas">
+<div class="wrap">
+<h2>¿Cuáles son las causas?</h2>
+<p class="intro">No hay una sola causa. Casi siempre es la suma de factores personales, familiares y sociales.</p>
+<div class="grid">
+<article class="card"><h3>Falta de educación sexual</h3><p>Sin información clara sobre reproducción, anticoncepción y salud sexual es más difícil decidir bien.</p></article>
+<article class="card"><h3>Presión social o de pareja</h3><p>Algunas personas se sienten presionadas a iniciar relaciones sexuales para las que no están preparadas.</p></article>
+<article class="card"><h3>Poca comunicación en la familia</h3><p>Cuando es difícil hablar de sexualidad, límites y protección, las dudas se quedan sin respuesta.</p></article>
+<article class="card"><h3>Barreras para llegar a la salud</h3><p>La desinformación y los prejuicios impiden que muchos jóvenes reciban atención adecuada.</p></article>
+<article class="card"><h3>Desigualdad y vulnerabilidad</h3><p>La violencia, la falta de oportunidades y las condiciones económicas también aumentan el riesgo.</p></article>
+</div>
+</div>
+</section>
 
-    <div class="indicacion">
-        <span class="flecha">↑</span>
-        <p>presiona al nick chiquito</p>
-    </div>
+<section id="consecuencias" class="tint">
+<div class="wrap">
+<h2>Consecuencias del embarazo adolescente</h2>
+<p class="intro">Hablamos de los desafíos sin señalar a nadie: las madres y los padres adolescentes merecen respeto y apoyo.</p>
+<div class="cons">
+<article class="card"><h3>En la salud</h3><ul><li>Más probabilidad de algunas complicaciones en el embarazo y el parto, sobre todo en adolescentes más jóvenes.</li><li>Necesidad de controles médicos y seguimiento especializado.</li><li>Posibles complicaciones para la madre y el bebé.</li></ul></article>
+<article class="card"><h3>En la educación</h3><ul><li>Dificultades para seguir estudiando.</li><li>Posibles interrupciones en la formación.</li><li>Más obstáculos para cumplir metas educativas.</li></ul></article>
+<article class="card"><h3>En lo social y emocional</h3><ul><li>Cambios grandes en las responsabilidades.</li><li>Posibles dificultades económicas.</li><li>Estrés y preocupación.</li><li>Cambios en las relaciones familiares y sociales.</li></ul></article>
+</div>
+<p class="aviso">Un embarazo adolescente no significa abandonar los sueños. Quienes lo viven necesitan apoyo, respeto y oportunidades para estudiar y desarrollar su proyecto de vida.</p>
+<div class="dos inv estigma">
+<img src="images/estigma.jpg" alt="Ilustración de una estudiante embarazada rodeada de manos que la señalan">
+<div>
+<h3>El señalamiento también hace daño</h3>
+<p>Muchas veces lo más duro no es el embarazo, sino el juicio de los demás. Señalar, burlarse o excluir empuja a las adolescentes a esconderse y a no pedir ayuda a tiempo.</p>
+<p style="margin-top:12px">Escuchar sin juzgar es la primera forma de cuidar.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <audio id="cuteSound" src="sounds/cute.mp3" preload="auto"></audio>
+<section id="anticonceptivos">
+<div class="wrap">
+<h2>Métodos anticonceptivos</h2>
+<p class="intro">Ayudan a prevenir embarazos. Cada uno tiene ventajas y condiciones de uso, y un profesional de salud puede orientarte para elegir.</p>
+<div class="grid">
+<article class="card"><h3>Preservativo o condón</h3><p>Método de barrera que evita el embarazo y reduce el riesgo de infecciones de transmisión sexual (ITS), incluido el VIH.</p><span class="etiqueta si">Protege contra ITS</span></article>
+<article class="card"><h3>Pastillas anticonceptivas</h3><p>Medicamentos hormonales que previenen el embarazo. Deben usarse según las indicaciones de un profesional de salud.</p><span class="etiqueta no">No protege contra ITS</span></article>
+<article class="card"><h3>Implante subdérmico</h3><p>Pequeño dispositivo que el personal de salud coloca bajo la piel del brazo. Libera hormonas durante varios años, según el producto.</p><span class="etiqueta no">No protege contra ITS</span></article>
+<article class="card"><h3>Dispositivo intrauterino (DIU)</h3><p>Lo coloca un profesional de salud dentro del útero. Hay versiones hormonales y de cobre.</p><span class="etiqueta no">No protege contra ITS</span></article>
+<article class="card"><h3>Inyección anticonceptiva</h3><p>Método hormonal que se aplica periódicamente, según el tipo de inyección y las indicaciones médicas.</p><span class="etiqueta no">No protege contra ITS</span></article>
+</div>
+<p class="aviso">No existe un método ideal para todas las personas: depende de las necesidades, preferencias y condiciones de salud de cada quien. Una estrategia clave es la doble protección: preservativo junto con otro método, para prevenir embarazos e ITS.</p>
+</div>
+</section>
 
-    <script>
-        const ramitas = document.getElementById("ramitas");
-        const cuteSound = document.getElementById("cuteSound");
+<section id="prevenir" class="tint">
+<div class="wrap">
+<h2>¿Cómo prevenirlo?</h2>
+<p class="intro">La prevención empieza con información, respeto y responsabilidad.</p>
+<ol class="pasos">
+<li><div><b>Infórmate</b>Conoce cómo funcionan el cuerpo, la reproducción y los métodos anticonceptivos.</div></li>
+<li><div><b>Decide libremente</b>Nadie debe presionar a otra persona para iniciar una relación sexual.</div></li>
+<li><div><b>Conoce los métodos</b>Consulta con profesionales de salud las opciones disponibles.</div></li>
+<li><div><b>Usa protección</b>El preservativo ayuda a prevenir embarazos e infecciones de transmisión sexual.</div></li>
+<li><div><b>Aprende a poner límites</b>Cada persona tiene derecho a decidir qué quiere y qué no.</div></li>
+<li><div><b>Busca orientación</b>Habla con profesionales de salud, orientadores escolares o adultos de confianza.</div></li>
+<li><div><b>Construye tu proyecto de vida</b>Ponte metas académicas, personales y profesionales.</div></li>
+</ol>
+</div>
+</section>
 
-        ramitas.addEventListener("click", () => {
-            cuteSound.currentTime = 0;
-            cuteSound.play();
+<section id="derechos">
+<div class="wrap dos">
+<div>
+<h2>Tus derechos sexuales y reproductivos</h2>
+<ul class="razones">
+<li>Recibir educación sexual integral.</li>
+<li>Obtener información científica y confiable.</li>
+<li>Recibir atención en salud sexual y reproductiva.</li>
+<li>Decidir sobre tu cuerpo.</li>
+<li>Vivir libre de violencia, abuso y discriminación.</li>
+<li>Tener privacidad y un trato respetuoso.</li>
+<li>Recibir orientación sobre anticoncepción.</li>
+</ul>
+<p style="margin-top:20px">En Colombia, el Ministerio de Salud promueve servicios de salud amigables para adolescentes y jóvenes, donde se recibe orientación y atención en salud sexual y reproductiva.</p>
+</div>
+<div class="card" style="padding:34px">
+<h3>Nadie decide por ti</h3>
+<p>Nadie debe ser obligado a tener relaciones sexuales ni a aceptar prácticas con las que no está de acuerdo. Tampoco es necesario tener relaciones durante la adolescencia: cada persona decide cuándo está lista, y también puede decidir no tenerlas.</p>
+</div>
+</div>
+</section>
 
-            ramitas.classList.remove("squish");
-            void ramitas.offsetWidth;
-            ramitas.classList.add("squish");
+<section id="mitos" class="oscuro">
+<div class="wrap">
+<h2>Mitos y realidades</h2>
+<p class="intro">Toca cada tarjeta para descubrir qué hay de cierto.</p>
+<div class="mitos">
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">La primera relación sexual no puede producir un embarazo.</strong><strong class="real">Falso. Puede haber embarazo desde la primera relación si hay posibilidad de fecundación.</strong></button>
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">El preservativo solo previene embarazos.</strong><strong class="real">Falso. También ayuda a prevenir infecciones de transmisión sexual.</strong></button>
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">Los métodos anticonceptivos producen infertilidad.</strong><strong class="real">Falso. Los métodos habituales no producen infertilidad permanente.</strong></button>
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">El método del calendario es completamente seguro.</strong><strong class="real">Falso. Tiene una posibilidad considerable de fallar.</strong></button>
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">Prevenir un embarazo es responsabilidad solo de la mujer.</strong><strong class="real">Falso. Es una responsabilidad compartida.</strong></button>
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">Hablar de sexualidad hace que los adolescentes tengan relaciones.</strong><strong class="real">Falso. La educación sexual da herramientas para decidir con información.</strong></button>
+<button class="mito" aria-pressed="false"><small class="falso">Mito</small><small class="real">Realidad</small><strong class="falso">Todos los métodos anticonceptivos protegen contra ITS.</strong><strong class="real">Falso. El preservativo es el método que también ayuda a prevenirlas.</strong></button>
+</div>
+</div>
+</section>
 
-            ramitas.addEventListener("animationend", function quitarAnimacion(event) {
-                if (event.animationName === "squishy") {
-                    ramitas.classList.remove("squish");
-                    ramitas.removeEventListener("animationend", quitarAnimacion);
-                }
-            });
-        });
-    </script>
+<section id="comunicacion">
+<div class="wrap">
+<h2>La importancia de hablar</h2>
+<p class="intro">Hablar de sexualidad no debería dar vergüenza. Todos necesitamos personas que escuchen y orienten sin juzgar.</p>
+<div class="grid">
+<article class="card"><h3>En la familia</h3><p>Padres y cuidadores pueden dar confianza, acompañamiento y orientación.</p></article>
+<article class="card"><h3>En el colegio</h3><p>Los docentes pueden abrir espacios de aprendizaje y reflexión sobre sexualidad y prevención.</p></article>
+<article class="card"><h3>Entre amigos</h3><p>Comparte información confiable y evita difundir rumores o consejos que pongan en riesgo a otros.</p></article>
+<article class="card"><h3>En los servicios de salud</h3><p>Los profesionales resuelven dudas, explican los métodos y dan orientación personalizada.</p></article>
+</div>
+</div>
+</section>
 
+<section id="posible-embarazo" class="tint">
+<div class="wrap dos">
+<img src="images/pareja.jpg" alt="Una adolescente y un adolescente miran juntos una prueba de embarazo">
+<div>
+<h2>¿Qué hacer ante un posible embarazo?</h2>
+<ul class="razones">
+<li>Mantén la calma y evita decisiones apresuradas.</li>
+<li>Pide orientación en un servicio de salud.</li>
+<li>Haz una prueba de embarazo siguiendo sus indicaciones.</li>
+<li>Consulta con un profesional para confirmar el resultado y conocer las opciones de atención.</li>
+<li>Busca el apoyo de un adulto de confianza, si es posible.</li>
+<li>Exige atención sin discriminación ni señalamientos.</li>
+</ul>
+<p style="margin-top:18px">Si el embarazo se confirma, tienes derecho a atención integral, información y acompañamiento sobre las opciones disponibles, conforme a la legislación colombiana.</p>
+<p class="aviso" style="margin-top:20px">Si el embarazo está relacionado con abuso, violencia o coerción, busca atención y protección especializada de inmediato.</p>
+</div>
+</div>
+</section>
+
+<section id="emergencia">
+<div class="wrap">
+<h2>Anticoncepción de emergencia</h2>
+<p class="intro">Puede ayudar a prevenir un embarazo después de una relación sin protección o cuando un método pudo haber fallado.</p>
+<div class="grid">
+<article class="card"><h3>Busca orientación pronto</h3><p>Pide orientación médica lo antes posible.</p></article>
+<article class="card"><h3>No es de uso habitual</h3><p>No reemplaza a un método anticonceptivo regular.</p></article>
+<article class="card"><h3>No interrumpe un embarazo</h3><p>No actúa sobre un embarazo ya establecido.</p></article>
+<article class="card"><h3>No protege contra ITS</h3><p>Un profesional puede explicarte las opciones y cómo usarlas.</p></article>
+</div>
+<p class="lineas">No tienes que sentir vergüenza por pedir orientación: los servicios de salud están para atender estas situaciones.</p>
+</div>
+</section>
+
+<section id="proyecto" class="tint">
+<div class="wrap">
+<h2>Tu proyecto de vida</h2>
+<p class="intro">La adolescencia es una etapa de descubrimiento y de sueños. Prevenir también es dar oportunidades para que cada persona construya su camino.</p>
+<div class="grid">
+<article class="card"><h3>Estudiar</h3><p>Terminar el colegio e ingresar a la universidad.</p></article>
+<article class="card"><h3>Crecer</h3><p>Aprender nuevas habilidades y desarrollar talentos artísticos o deportivos.</p></article>
+<article class="card"><h3>Ser independiente</h3><p>Conseguir independencia económica en el futuro.</p></article>
+<article class="card"><h3>Relaciones con respeto</h3><p>Construir vínculos basados en el respeto y tomar decisiones conscientes sobre la maternidad y la paternidad.</p></article>
+</div>
+<p class="aviso">Prevenir un embarazo no es rechazar la maternidad o la paternidad: es entender que son decisiones importantes que se toman libremente y con responsabilidad.</p>
+</div>
+</section>
+
+<section id="hombres">
+<div class="wrap">
+<h2>El papel de los hombres</h2>
+<p class="intro">La prevención no es solo de las mujeres. Los hombres también tienen que participar activamente.</p>
+<ul class="razones" style="max-width:62ch">
+<li>Infórmate sobre salud sexual y reproductiva.</li>
+<li>Conoce los métodos anticonceptivos.</li>
+<li>Participa en las decisiones sobre protección.</li>
+<li>Respeta los límites y decisiones de tu pareja.</li>
+<li>No ejerzas presión emocional ni física.</li>
+<li>Entiende que la paternidad implica responsabilidades.</li>
+</ul>
+</div>
+</section>
+
+<section id="ayuda" class="tint ayuda">
+<div class="wrap">
+<h2>¿Dónde buscar ayuda en Colombia?</h2>
+<p class="intro">Estas instituciones ofrecen información y orientación.</p>
+<div class="grid">
+<a class="card" href="https://www.minsalud.gov.co" target="_blank" rel="noopener noreferrer"><h3>Ministerio de Salud y Protección Social</h3><p>Información sobre salud sexual, reproductiva y prevención del embarazo adolescente.</p><span class="ir">Visitar sitio</span></a>
+<a class="card" href="https://profamilia.org.co" target="_blank" rel="noopener noreferrer"><h3>Profamilia</h3><p>Organización que trabaja en salud sexual y reproductiva, educación y orientación.</p><span class="ir">Visitar sitio</span></a>
+<a class="card" href="https://www.icbf.gov.co" target="_blank" rel="noopener noreferrer"><h3>ICBF</h3><p>Protección y orientación para niños, niñas, adolescentes y sus familias.</p><span class="ir">Visitar sitio</span></a>
+<div class="card"><h3>Tu EPS o IPS</h3><p>Pide asesoría sobre planificación familiar, anticoncepción y salud sexual y reproductiva. Pregunta también por los Servicios de Salud Amigables para Adolescentes y Jóvenes.</p></div>
+</div>
+</div>
+</section>
+
+<section id="preguntas">
+<div class="wrap">
+<h2>Preguntas frecuentes</h2>
+<div class="faq">
+<details><summary>¿A qué edad puede ocurrir un embarazo?</summary><p>Desde que comienza la capacidad reproductiva. Por eso es importante recibir educación e información desde edades tempranas.</p></details>
+<details><summary>¿El embarazo adolescente solo afecta a las mujeres?</summary><p>No. También tiene consecuencias y responsabilidades para los hombres, las familias y la comunidad.</p></details>
+<details><summary>¿Se puede prevenir un embarazo adolescente?</summary><p>Sí. La educación sexual integral, las decisiones informadas y el acceso a métodos anticonceptivos son herramientas fundamentales.</p></details>
+<details><summary>¿Es necesario tener relaciones sexuales durante la adolescencia?</summary><p>No. Cada persona decide cuándo está preparada y también puede decidir no tener relaciones.</p></details>
+<details><summary>¿Los adolescentes pueden pedir orientación sobre anticonceptivos?</summary><p>Sí. En Colombia pueden pedir información y asesoría en los servicios de salud sexual y reproductiva.</p></details>
+<details><summary>¿El preservativo es suficiente para prevenir las ITS?</summary><p>Reduce mucho el riesgo de varias infecciones cuando se usa bien, pero no elimina todos los riesgos.</p></details>
+<details><summary>¿Y si mi pareja no quiere usar protección?</summary><p>Nadie debe ser obligado a tener relaciones ni a aceptar prácticas con las que no esté de acuerdo. Pon límites y busca apoyo si hay presión.</p></details>
+</div>
+</div>
+</section>
+
+<section id="mensajes" class="tint">
+<div class="wrap">
+<div class="frases">
+<div class="frase"><h3>Tu futuro también importa.</h3><p>Infórmate hoy para tomar decisiones responsables mañana.</p></div>
+<div class="frase"><h3>La prevención es de todos.</h3><p>El respeto, la comunicación y la protección son fundamentales.</p></div>
+<div class="frase"><h3>Tu cuerpo, tus decisiones.</h3><p>Nadie debe presionarte para decidir sobre tu sexualidad.</p></div>
+</div>
+</div>
+</section>
+
+<section id="guion" class="oscuro">
+<div class="wrap guion">
+<h2>Guion del video de presentación</h2>
+<p><b>Apertura</b>Hola, bienvenidos a Hablemos sin miedo, un vlog para hablar claro sobre el embarazo adolescente.</p>
+<p><b>Por qué existe</b>Muchas veces nadie nos explica estos temas, y las dudas se quedan guardadas. Aquí vamos a conversar sin juicios y con información confiable.</p>
+<p><b>Qué vas a encontrar</b>Hablaremos de las causas y las consecuencias, de los métodos anticonceptivos, de tus derechos y de dónde pedir ayuda en Colombia.</p>
+<p><b>Cierre</b>Informarte es cuidarte. Tu cuerpo, tus decisiones y tu futuro importan. Gracias por acompañarnos.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<button class="ramitas" id="ramitas" aria-label="Tocar al Nick chiquito"><img src="images/ramitas.gif" alt="" width="130" height="130"></button>
+<p class="pista">Presiona al Nick chiquito</p>
+<p class="cred">Página hecha por NickDZ</p>
+<p class="pista">Formación Integral II · <span id="anio"></span></p>
+</div>
+</footer>
+<audio id="cuteSound" src="sounds/cute.mp3" preload="auto"></audio>
+<script src="script.js"></script>
 </body>
 </html>
